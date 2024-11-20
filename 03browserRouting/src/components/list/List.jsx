@@ -1,15 +1,7 @@
 import React from 'react'
 
 function List(props) {
-  return (
-    <div>
-        return (
-            <ul>
-                <li>{props.item}</li>
-            </ul>
-        )
-    </div>
-  )
+  return  <li>{props.item}</li>
 }
 
 export default List

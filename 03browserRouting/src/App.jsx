@@ -1,46 +1,30 @@
 import React, { useState } from 'react'
-import Button from './button/Button'
-// import Nav from './components/navbar/Nav.jsx'
-// import Section from './components/section/Section'
+import List from './components/list/List';
+import Button from "./button/Button.jsx"
 
 function App() {
 
-  // const [name,setName]=useState("submit")
-  // const hendleAction = () => {
-  //   setName("changeName")
-  // }
-  // const hendleActionTwo = () => {
-  //   // alert("login clicked ")
-  //      <Nav />
-  // }
+  const data = ["apple", "mango", "orange", "papaya"];
+  const [name, setName] = useState("submit")
 
-
-
-  // const data=["apple", "mango","orange"];
-
-  // function hendleLi(){
-
-  // }
-
+  const hendleChange = () => {
+    setName("login")
+  }
 
   return (
-    <div>
-      {/* <Button
-        name={name}
-        onclick={hendleAction}
-      />
+    <>
+      <div>
+        {
+          data.map((item, ind) => {
+            return <List item={item} key={ind} />
+          })
+        }
+      </div><br />
 
-      <Button
-        name="RenderComponent"
-        onclick={hendleActionTwo}
-      /> */}
-
-      
-        <Button name="submit" onclick={hendleLi} />
-      
+      <Button name={name} onclick={hendleChange} />
 
 
-    </div>
+    </>
   )
 }
 
