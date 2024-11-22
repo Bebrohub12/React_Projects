@@ -1,52 +1,71 @@
-import React from 'react'
-import { Button, Checkbox, IconButton, FormControlLabel,FormControl,Radio,RadioGroup, FormLabel } from "@mui/material"
-import DeleteIcon from "@mui/icons-material/Delete"
-import Fingerprint from "@mui/icons-material/Fingerprint"
-
+import React, { useState } from 'react'
+import { Button, FormControl, InputLabel, TextField, Select, MenuItem, FormGroup, FormControlLabel, Checkbox, FormLabel, RadioGroup, Radio } from "@mui/material"
 
 function App() {
+
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    password: "",
+    course: "",
+    terms: false
+  });
+
+  const hendleChange = (e) => {
+    setInput((prev) => ({
+      ...prev,
+      [e.target.name]: [e.target.value]
+    }))
+  };
+
+  const hendleSubmit = (e) => {
+    // e.preventDefault();
+    e.preventDefault()
+    console.log(input);
+
+  }
+
   return (
-    <div>
-      <Button variant='text'>text</Button>
-      <Button variant='outlined'>outlined</Button>
-      <Button
-        // disabled
-        // color='success'       
-        // onClick={() => {
-        //   alert("button clicked")
-        // }} 
-        variant='contained'
-        startIcon={<DeleteIcon />}
-        sx={{ margin: "10px" }}
+    <>
+      <form onSubmit={hendleSubmit}>
+        <TextField variant='filled' onChange={hendleChange} value={input.name} name='name' placeholder='Enter Your Name' /><br />
 
-      >contained</Button>
+        <TextField variant='filled' onChange={hendleChange} value={input.email} name='email' placeholder='Enter Your Email' /><br />
 
-      <IconButton onClick={() => { alert("button clicked") }}>
-        <DeleteIcon color='success' />
-      </IconButton>
-      <IconButton onClick={() => { alert("FingerPrint Clicked") }}>
-        <Fingerprint />
-      </IconButton>
+        <TextField variant='filled' type='password' onChange={hendleChange} value={input.password} name='password' placeholder='Enter Your Password' /><br />
 
-      <Checkbox defaultChecked />
-      <FormControlLabel control={<Checkbox />} label="terms & condition" required />
-      <FormControlLabel label="check all" control={< Checkbox />} />
+        <FormControl sx={{ width: "200px" }}>
+          <InputLabel id="menu">Course</InputLabel>
+          <Select label="course" name='course' onChange={hendleChange}>
+            <MenuItem value={"mongoDB"}>monoDb</MenuItem>
+            <MenuItem value={"react"}>React</MenuItem>
+            <MenuItem value={"html"}>Html</MenuItem>
+          </Select>
+        </FormControl><br /><br />
 
-      <FormControl>
-        <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
-        <RadioGroup
-          aria-labelledby="demo-radio-buttons-group-label"
-          defaultValue="female"
-          name="radio-buttons-group"
-        >
-          <FormControlLabel value="female" control={<Radio />} label="Female" />
-          <FormControlLabel value="male" control={<Radio />} label="Male" />
-          <FormControlLabel value="other" control={<Radio />} label="Other" />
-        </RadioGroup>
-      </FormControl>
+        <FormGroup >
+          <FormControlLabel label="I Agree T&C" control={<Checkbox onChange={() => {
+            setInput((prev) => ({
+              ...prev,
+              terms: !input.terms
+            }))
+          }} />} />
+        </FormGroup><br />
+
+        <FormControl>
+          <FormLabel>Gender</FormLabel>
+          <RadioGroup name='gender' onChange={hendleChange}  >
+            <FormControlLabel label="Male" value={"male"} control={<Radio/>}/>
+            <FormControlLabel label="Female" value={"female"} control={<Radio/>}/>
+            <FormControlLabel label="Others" value={"others"} control={<Radio/>}/>
+          </RadioGroup>
+
+        </FormControl><br />
 
 
-    </div>
+        <Button variant='contained' type='submit'>submit</Button>
+      </form>
+    </>
   )
 }
 
