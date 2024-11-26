@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from "@mui/material"
 import Logo from "../Images/logoImg/logoImg.png"
+import { NavLink } from 'react-router-dom'
 
 function LogIn() {
     return (
@@ -17,7 +18,7 @@ function LogIn() {
                         background: "linear-gradient(#efe,#74FF63, #393)",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
-                    }}>Finmitra</h1><br />
+                    }}>Finmintra</h1><br />
                     <h1 style={{ fontSize: "27px" }}>(A Microfinance Management Software)</h1><br />
                     <h3>Powered by Vakilkaro</h3>
                 </div>
@@ -39,10 +40,20 @@ function LogIn() {
                                 <option value="customer">Customer</option>
                             </select>
                         </li>
-                        <li><Button variant='contained' sx={{ backgroundColor: "black" }}>Submit</Button></li>
+                        <li>
+                            <NavLink to="/login">
+                                <Button variant='contained' sx={{ backgroundColor: "black" }}>Submit</Button>{" "}
+                            </NavLink>
+
+                            <NavLink to="/regester">
+                                <Button variant='contained' sx={{ backgroundColor: "black" }}>Registration</Button>
+                            </NavLink>
+                        </li>
+
                     </ul>
                 </div>
             </section>
+
         </div>
     )
 }
