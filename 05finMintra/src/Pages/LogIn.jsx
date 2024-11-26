@@ -17,7 +17,7 @@ function LogIn() {
                         background: "linear-gradient(#efe,#74FF63, #393)",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
-                    }}>Finmintra</h1><br />
+                    }}>Finmitra</h1><br />
                     <h1 style={{ fontSize: "27px" }}>(A Microfinance Management Software)</h1><br />
                     <h3>Powered by Vakilkaro</h3>
                 </div>
@@ -33,7 +33,7 @@ function LogIn() {
                         <li><input type="text" placeholder='Password' className='inp' /></li>
                         <li>
                             <select className='inp'>
-                                <option disabled >Select Role</option>
+                                <option disabled selected >Select Role</option>
                                 <option value="administator">Administator</option>
                                 <option value="manager">Manager</option>
                                 <option value="customer">Customer</option>
