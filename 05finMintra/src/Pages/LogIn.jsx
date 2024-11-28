@@ -7,14 +7,13 @@ import { useNavigate } from 'react-router-dom'
 function LogIn() {
 
     const navigate = useNavigate()
-
     const [name, setName] = useState("")
     const [password, setPassword] = useState("")
 
-    // function inputBlank(){
-    //     setName(""),
-    //     setPassword("")
-    // }
+    function inputBlank() {
+        setName(""),
+            setPassword("")
+    }
 
     const userData = JSON.parse(localStorage.getItem("UserInfo"))
     // console.log(userData);
@@ -25,11 +24,12 @@ function LogIn() {
             return item.name == name && item.password == password
         })
 
-        if (x.length >0) {
+        if (x.length > 0) {
             navigate('/dashboard')
             console.log("hello")
         }
 
+        inputBlank()
     }
 
 
