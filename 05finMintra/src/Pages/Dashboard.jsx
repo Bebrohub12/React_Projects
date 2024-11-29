@@ -10,6 +10,7 @@ import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 import { PageContainer } from '@toolpad/core/PageContainer';
 import Grid from '@mui/material/Grid2';
 import LogIn from './LogIn';
+import { Outlet } from 'react-router-dom';
 
 const NAVIGATION = [
   {
@@ -114,6 +115,8 @@ export default function DashboardLayoutBasic(props) {
     >
       <DashboardLayout>
         <PageContainer>
+
+          <Outlet/>
           {/* <Grid container spacing={1}>
             <Grid size={5} />
             <Grid size={12}>
