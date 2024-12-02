@@ -2,8 +2,10 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LogIn from '../Pages/LogIn'
 import Registration from '../Pages/Registration'
-import Dash from '../Pages/Dash'
-import EmiCalculator from '../emiCalculator/Emicalculator'
+import Layout from '../Pages/Layout'
+import EmiCalculator from "../emiCalculator/EmiCalculator"
+import Dashboard from '../Pages/Dashboard'
+import NotFound from '../Pages/NotFound'
 
 function Nav() {
     return (
@@ -12,12 +14,10 @@ function Nav() {
                 <Routes>
                     <Route path="/" element={<LogIn />} />
                     <Route path="/regester" element={<Registration />} />
-                    <Route path="/dashboard" element={<Dash />} >
-                        <Route path='about' element={<LogIn />} />
-                        <Route path='loan' element={<Registration />} />
-                        <Route path='emicalculator' element={<EmiCalculator />} />
-                    </Route>
-
+                    <Route path='/dashboard' element={<Layout ChildComp={Dashboard}/>} />
+                    <Route path='/about' element={<Layout ChildComp={LogIn}/>} />
+                    <Route path='*' element={<Layout ChildComp={NotFound}/>} />
+                   
                 </Routes>
             </BrowserRouter>
         </div>

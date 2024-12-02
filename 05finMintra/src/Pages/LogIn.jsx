@@ -11,8 +11,8 @@ function LogIn() {
     const [password, setPassword] = useState("")
 
     function inputBlank() {
-        setName(""),
-            setPassword("")
+        setName("")
+        setPassword("")
     }
 
     const userData = JSON.parse(localStorage.getItem("UserInfo"))
@@ -25,7 +25,7 @@ function LogIn() {
         })
 
         if (x.length > 0) {
-            navigate('/dashboard')
+            navigate('/dashboard ')
             console.log("hello")
         }
 
@@ -71,19 +71,14 @@ function LogIn() {
                             </select>
                         </li>
                         <li>
-
                             <Button variant='contained' onClick={hendleLogin} sx={{ backgroundColor: "black" }}>Submit</Button>{" "}
-
-
-                            <NavLink to="/regester">
-                                <Button variant='contained' sx={{ backgroundColor: "black" }}>Registration</Button>
-                            </NavLink>
+                            <Button variant='contained' onClick={() => navigate("/regester")} sx={{ backgroundColor: "black" }}>Registration</Button>
                         </li>
 
                     </ul>
                 </div>
             </section>
-
+            {/* #4c72ee  blue  #16142a navyblue #0c0d1f body color */}
         </div>
     )
 }

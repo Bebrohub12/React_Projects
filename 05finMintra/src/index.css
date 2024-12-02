@@ -71,7 +71,7 @@
 
 /* Home Componets css here......... */
 
-.Home{
+.layout{
   /* display: flex; */
   position: relative;
   height: 100vh;
@@ -80,7 +80,7 @@
 .sidebaar{
   height: 100vh;
   width: 20%;
-  background-color: #E5D9F2;
+  background-color: #16142a;
   position:fixed;
   left:0px;
 }
@@ -89,15 +89,15 @@
   height: 15%;
   width:60%;
   background-color: rgb(92, 92, 97);
-  font-size: 19px;
+  font-size: 17px;
   font-weight: bold;
   padding: 5px 15px;
-  border-radius: 20px;
+  border-radius: 10px;
   color: rgb(232, 212, 212);  
  
 }
 .sidebaar ul li:hover{
-  background-color: rgb(119, 87, 125);
+  background-color: #4c72ee;
   color:white;
   position: relative;
   top: 2px;
@@ -105,9 +105,9 @@
 }
 .appContentDisplay{
   width: 80%;
-  /* background-color: #654796; */
+  height: 100vh;
+  background-color: #0c0d1f;
   position: absolute;
   right: 0;  
-  text-align: justify;
-
-}
+  text-align: justify; 
+};        
