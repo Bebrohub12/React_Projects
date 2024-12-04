@@ -2,7 +2,9 @@ import React from 'react'
 
 function Emicalculator() {
   return (
-    <div>Emicalculator</div>
+    <div style={{color:"white"}}>
+      <h1>Emicalculator</h1>
+    </div>
   )
 }
 

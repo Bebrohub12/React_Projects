@@ -3,6 +3,7 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: sans-serif;
+  /* background-color: #0c0d1f; */
 }
 #loginPage{
   height: 100vh;
@@ -105,9 +106,9 @@
 }
 .appContentDisplay{
   width: 80%;
-  height: 100vh;
   background-color: #0c0d1f;
   position: absolute;
   right: 0;  
   text-align: justify; 
+  /* padding: 0px 10px */
 };        

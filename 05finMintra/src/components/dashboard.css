@@ -1,0 +1,86 @@
+.Header-container{
+    height: 60px;
+    width: 100%;
+    background-color:  #111130;
+    color: white;
+    position: fixed;
+    z-index:1;
+}
+.card-container{
+    width: 100%;
+    position:relative;
+    top: 80px;
+}
+.child-card-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;    
+}
+.total-disbursment{
+    height:150px;
+    width: 48%;
+    background-color: #5882f0;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fdfcf9;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+.child-card-container-two{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.collection-Card{
+    height: 300px;
+    width: 32%;
+    background-color: #16142a;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.child-card-container-three{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    color: #fdfcf9;
+
+}
+.Customers-Overview{
+    height: 350px;
+    width: 64%;
+    background-color: #16142a;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+}
+.Today-Working-List{
+    height: 350px;
+    width: 32%;
+    background-color: #16142a;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+
+}
+.child-card-container-four{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    color: #fdfcf9;
+}
+.Active-Customers{
+    height: 350px;
+    width: 97%;
+    background-color: #16142a;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+}

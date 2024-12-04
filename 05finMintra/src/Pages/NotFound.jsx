@@ -2,7 +2,7 @@ import React from 'react'
 
 function NotFound() {
   return (
-    <div>
+    <div style={{color:"white"}}>
         <p>this page is not availble 404/</p>
     </div>
   )
