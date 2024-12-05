@@ -6,6 +6,12 @@
     position: fixed;
     z-index:1;
 }
+.footer-container{
+    height: 60px;
+    width: 100%;
+    background-color:  #111130;
+    color: white;
+}
 .card-container{
     width: 100%;
     position:relative;
