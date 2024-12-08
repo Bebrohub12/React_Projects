@@ -11,7 +11,7 @@
 //     function addTodo() {
 //       // console.log(value);
 //       TodoData.push(value)
-  
+
 //     }
 //   },[value])
 
@@ -51,16 +51,17 @@
 
 import React, { useState } from 'react';
 import "./App.css";
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 
 function App() {
   const [value, setValue] = useState("");
   const [todoData, setTodoData] = useState([]);
 
-  // Function to add a new todo item
   const addTodo = () => {
-    if (value.trim()) { // Check if the input is not empty
+    if (value.trim()) {
       setTodoData([...todoData, value]);
-      setValue(""); // Clear the input field
+      setValue("");
     }
   };
 
@@ -79,9 +80,20 @@ function App() {
 
         {
           todoData.length > 0 && (
-            <ul>
+            <ul
+              style={{
+                listStyle: "none",
+                color: "white",
+                fontSize: "30px",
+                fontWeight: "bold"
+              }}>
               {todoData.map((item, ind) => (
-                <li key={ind}><h1>{item}</h1></li>
+                <li key={ind} style={{backgroundColor:"blue",margin:"8px"}}>
+                  {item} {""}
+                  <span><DeleteIcon/></span>
+                  <span><EditIcon/></span>
+                  
+                </li>
               ))}
             </ul>
           )
