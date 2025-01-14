@@ -12,9 +12,11 @@ function App() {
   });
 
   const hendleChange = (e) => {
+    console.log(e);
+    
     setInput((prev) => ({
       ...prev,
-      [e.target.name]: [e.target.value]
+      [e.target.name]: e.target.value
     }))
   };
 
