@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.headerContainer{
+    padding: 0 40px;
+    height: 9vh;
+    width: 100%;
+    background-color: rgb(33, 146, 172);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchbaar{
+    position: relative;
+}
+.searchbaar input{
+    height: 35px;
+    width: 250px;
+    border-radius:18px;
+    border-color: #fff;
+}
+.icon{
+    position: relative;
+    right: 28px;
+    top: 10px;
+}
+ 
