@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import "../product/product.css"
+import { useContext } from 'react'
+import { DataContext } from '../app/App'
+
+
+
 
 function Product() {
 
     const [data, setData] = useState([])
-    const [cart, setCart] = React.useState([1, 2])
+    const { cart, setCart } = useContext(DataContext);
 
-    console.log(data);
+
+    // console.log(data);
 
 
     useEffect(() => {
@@ -15,6 +21,12 @@ function Product() {
             .then((result) => setData(result.data.products))
             .catch((err) => console.log(err))
     }, [])
+
+    function handleAddtocart(item) {
+        setCart([...cart, item])
+
+    }
+    console.log(cart);
 
 
     return (
@@ -28,8 +40,7 @@ function Product() {
                             </div>
                             <p>{item.title}</p>
                             <p>{item.price}</p>
-
-                            <button className='btn' onClick={(e) => { console.log(e) }}>Add to Cart</button>
+                            <button className='btn' onClick={() => { handleAddtocart(item) }}>Add to Cart</button>
 
 
                         </div>
