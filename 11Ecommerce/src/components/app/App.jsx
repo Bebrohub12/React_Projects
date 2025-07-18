@@ -7,8 +7,6 @@ import Cart from '../cart/Cart'
 import { createContext } from 'react'
 export const DataContext = createContext({})
 
-
-
 function App() {
 
   const [cart, setCart] = useState([])
