@@ -11,7 +11,7 @@ const users = [
 
 
 app.get("/v1/api",(req,res)=>{
-    res.send(users)
+    res.status(200).send(users)
 })
 
 app.listen(8000,()=>{
