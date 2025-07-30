@@ -15,7 +15,7 @@ function Cart() {
                 <img src={item?.image} alt="img" />
               </div>
               <p>{item.title}</p>
-              <p>{item.price}</p>
+              <p>Rs.{item.price}₹</p>
             </div>
           )
         })

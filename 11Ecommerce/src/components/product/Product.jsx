@@ -23,10 +23,18 @@ function Product() {
     }, [])
 
     function handleAddtocart(item) {
-        setCart([...cart, item])
 
+        const isItemInCart = cart.find((cartItem) => {
+            return cartItem.id === item.id
+
+        })
+        if (!isItemInCart) {
+            setCart([...cart, item])
+        } else {
+            console.log("item is already added");
+        }
     }
-    console.log(cart);
+    // console.log(cart);
 
 
     return (
